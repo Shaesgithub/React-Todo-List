@@ -41,7 +41,8 @@ body{
   width: 28em;
   background: var(--clr-other);
   border-radius: 30px;
-  background-image: url("./Image1.png");
+  /* background-image: url("./Image1.png"); */
+  background-image: url("https://i.postimg.cc/wvvr37z4/Image1.png");
   background-size:contain;
   background-blend-mode:overlay;
   
@@ -107,11 +108,11 @@ input[type="text"]{font-family: var(--ff-main);}
 }
 
 .text{
-  width: inherit;
+  width: 386px;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  text-align: left;
   color: var(--clr-outline);
   font-size: 15px;
   position: absolute;
