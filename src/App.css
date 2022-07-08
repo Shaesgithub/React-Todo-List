@@ -1,0 +1,158 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root{
+  --ff-main: 'Josefin Sans', sans-serif;
+  --ff-secondary: 'Bebas Neue';
+
+  --clr-bg-color: rgb(0, 0, 0);
+  --clr-accent: #FCCC83;
+  --clr-outline:#ffffff;
+  --clr-other: #f6e9db;
+  --clr-text: #000;
+  
+  --fs-h1: 4rem;
+  --fs-body: 1.5rem;
+}
+
+body{
+  font-size: var(--fs-body);
+  font-family: var(--ff-main);
+  padding-top: 1em;
+  height: 100%;
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: var(--clr-bg-color);
+  color: var(--clr-text);
+  
+  animation: fadeIn 2s;
+}
+
+.App{
+  min-height: 25em;
+  width: 28em;
+  background: var(--clr-other);
+  border-radius: 30px;
+  background-image: url("./Image1.png");
+  background-size:contain;
+  background-blend-mode:overlay;
+  
+
+}
+
+.Header{
+  width: auto;
+  height: auto;
+  position: relative;
+}
+
+.Header h1{
+  width: 100%;
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 3px 0 var(--clr-accent);
+  font-family: var(--ff-secondary); 
+  font-size: var(--fs-h1);
+}
+
+.Header img{
+  width: 600px;
+  /* center image */
+  margin-top: 24px; 
+  margin-left: 10px;
+}
+input{
+  width: 500px;
+  height: 33px;
+  border: none;
+  border-radius: 20px;
+  text-align: center;
+  margin-left: 67px;
+  position: relative;
+  top: -15px;
+  /* padding: 20px; */
+  /* background-color: var(--clr-accent); */
+}
+input:focus {outline: none; background-color: var(--clr-accent);}
+input:hover{background-color: var(--clr-accent);}
+input[type="text"]{font-family: var(--ff-main);}
+::placeholder {color: var(--clr-accent);}
+.complete {
+  display: inline-block;
+  width: 400px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+  margin: 15px 0px;
+  background-color: var(--clr-text);
+}
+.text_wrapper{
+  width: 400px;
+  height: 50px;
+  padding-left: 9px;
+  display:flex;
+  align-items: center;
+
+}
+
+.text{
+  width: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--clr-outline);
+  font-size: 15px;
+  position: absolute;
+
+}
+form, form button{
+  margin: 10px 0 0 0;
+  position: relative;
+  top: -15px;
+}
+form button{
+  position: relative;
+  top: -13px;
+}
+
+form button, .todo_Editbtn, .todo_Negbtn{
+  width: 40px;
+  height: 40px;
+  margin: 0px 10px;
+  border-radius: 50%;
+  font-size: 20px;
+  background: var(--clr-accent); 
+  color: var(--clr-text); 
+  border: none;
+  cursor: pointer;
+}
+
+.todo_Editbtn, .todo_Negbtn{
+
+  margin: -9px 10px;
+  
+}
+button:hover{background: var(--clr-outline); color: var(--clr-accent);}
+
+/* Fade in animation*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    margin-top: 5rem;
+  }
+  to {
+    opacity: 1;
+  }
+}
